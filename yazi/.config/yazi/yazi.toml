@@ -1,0 +1,22 @@
+[plugin]
+prepend_previewers = [
+    { name = "*.txt", run = "bat" },
+    { name = "*.csv", run = "bat" },
+    { name = "*.md", run = "bat" },
+    { name = "*.js", run = "bat" },
+    { name = "*.jsx", run = "bat" },
+    { name = "*.html", run = "bat" },
+    { name = "*.tex", run = "bat" },
+    { name = "*.css", run = "bat" },
+    { name = "*.py", run = "bat" },
+    { name = "*.java", run = "bat" },
+    { name = "*.toml", run = "bat" },
+    { name = "*.yaml", run = "bat" },
+    { name = "*.gitignore", run = "bat" },
+    { name = "*.eslintrc", run = "bat" },
+    { name = "*.sh", run = "bat" },
+    { name = "*.zshrc", run = "bat" },
+    { name = "*.config", run = "bat" },
+]
+[manager]
+show_hidden = true
