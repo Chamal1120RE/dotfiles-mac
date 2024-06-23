@@ -26,9 +26,9 @@ These are the dotfiles of my personal macOS rice flavoured with catppuccin-mocha
 
 > NOTE: Check out my individual repos for the details of my neovim and tmux configs.
 
-➡️ neovim repo -
+➡️ neovim repo - https://github.com/Chamal1120/Lazy-neovim-config
 <br>
-➡️ tmux repo - 
+➡️ tmux repo - https://github.com/Chamal1120/Custom_tmux_config
 
 ## Prerequisites
 I don't have a script to automate the nessaasy package installations at the moment. (it's WIP).
