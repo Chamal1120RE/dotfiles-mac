@@ -33,7 +33,7 @@ These are the dotfiles of my personal macOS rice flavoured with catppuccin-mocha
 ## Prerequisites
 I don't have a script to automate the nessaasy package installations at the moment. (it's WIP).
 
-Till then, you need manually install packages to your system.
+Till then, you need to manually install packages to your system.
 
 ### for Mac users
 
