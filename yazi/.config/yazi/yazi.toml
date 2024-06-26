@@ -26,6 +26,7 @@ prepend_previewers = [
     { name = "*.sh", run = "bat" },
     { name = "*.zshrc", run = "bat" },
     { name = "*.config", run = "bat" },
+    { name = "*.conf", run = "bat" },
 ]
 [manager]
-show_hidden = true
+show_hidden = false
