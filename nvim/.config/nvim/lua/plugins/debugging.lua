@@ -10,7 +10,7 @@ return {
       config = function()
           require("mason-nvim-dap").setup({
               ensure_installed = { "python" },
-              automatic_installation = false, 
+              automatic_installation = false,
               handlers = {
                   -- Custom handlers for specific adapters can be defined here
                   python = function(config)
