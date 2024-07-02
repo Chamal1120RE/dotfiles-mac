@@ -1,6 +1,6 @@
 # Mac Rice ^_^
 
-These are the dotfiles of my personal macOS rice flavoured with catppuccin-mocha theme.
+Dotfiles of my personal macOS rice flavoured with catppuccin-mocha theme.
 
 ## Preview
 ![preview_01](/previews/preview_01.png)
@@ -19,8 +19,10 @@ These are the dotfiles of my personal macOS rice flavoured with catppuccin-mocha
 10. `btop` system monitor
 11. `neovim` (with LSP, Debugging, syntax highlighting and many more)
 12. `tmux` (Configured to use vim keys)
-13. `fastfetch` (No catppuccin colors yet but WIP)
-14. `.hushlogin` file to disable "last login" message.
+13. `yabai` tiling WM for macOS
+14. `skhd` keymaps for yabai
+15. `fastfetch` (No catppuccin colors yet but WIP)
+16. `.hushlogin` file to disable "last login" message.
 
 <br>
 
@@ -51,7 +53,7 @@ xcode-select --install
 
 ```bash
 # This will install all the packages I have used for the rice
-brew install git wget gcc fd fzf ripgrep eza neovim tmux starship zsh-fast-syntax-highlighting yazi yt-dlp stow bat btop zoxide fastfetch && brew install --cask kitty firefox rectangle alt-tab
+brew install git wget gcc fd fzf ripgrep eza neovim tmux starship zsh-fast-syntax-highlighting yazi yt-dlp stow bat btop zoxide fastfetch koekeishiya/formulae/skhd koekeishiya/formulae/yabai && brew install --cask kitty wezterm firefox alt-tab anaconda
 ```
 
 ### for Linux users
