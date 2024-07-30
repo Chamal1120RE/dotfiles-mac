@@ -34,19 +34,21 @@ export BAT_CONFIG_PATH="/Users/randy99/.config/bat/config/bat.conf"
 export LDFLAGS="-L/usr/local/opt/node@20/lib"
 export CPPFLAGS="-I/usr/local/opt/node@20/include"
 
+export FZF_DEFAULT_OPTS=" --preview 'bat -n --color=always {}' --bind=down:preview-down --bind=up:preview-up \
+--color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
+--color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+--color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
+
 # Other path variable exports
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$JAVA_HOME/bin:$PATH"
-export JAVA_HOME=$(/usr/libexec/java_home -v 21)
+export JAVA_HOME="$(/usr/libexec/java_home -v 21)"
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 export PATH="/usr/local/opt/node@20/bin:$PATH"
+export PATH="$PATH:$HOME/Documents/nand2tetris/tools"
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-
-# Special init commands for custom packages
-eval "$(starship init zsh)"
-eval "$(zoxide init zsh)"
 
 # pnpm
 export PNPM_HOME="/Users/randy99/Library/pnpm"
@@ -55,3 +57,23 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/usr/local/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
+        . "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh"
+    else
+        export PATH="/usr/local/Caskroom/miniconda/base/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+# Special init commands for custom packages
+eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
+
