@@ -13,9 +13,9 @@ return {
     },
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "tsserver" }
+        ensure_installed = { "lua_ls", "tsserver", "bashls", "clangd", "ruff_lsp", "tailwindcss" },
       })
-    end
+    end,
   },
   {
     "neovim/nvim-lspconfig",
@@ -28,6 +28,15 @@ return {
         capabilities = capabilities,
       })
       lspconfig.tsserver.setup({
+        capabilities = capabilities,
+      })
+      lspconfig.bashls.setup({
+        capabilities = capabilities,
+      })
+      lspconfig.clangd.setup({
+        capabilities = capabilities,
+      })
+      lspconfig.ruff_lsp.setup({
         capabilities = capabilities,
       })
       lspconfig.tailwindcss.setup({
