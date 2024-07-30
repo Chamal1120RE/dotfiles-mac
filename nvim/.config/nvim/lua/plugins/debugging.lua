@@ -4,17 +4,23 @@ return {
 		dependencies = {
 			"neovim/nvim-lspconfig",
 			"mfussenegger/nvim-dap",
-			"mfussenegger/nvim-dap-python",
+			"mfussenegger/nvim-dap-python", --optional
 			{ "nvim-telescope/telescope.nvim", branch = "0.1.x", dependencies = { "nvim-lua/plenary.nvim" } },
 		},
 		lazy = false,
-		branch = "regexp",
+		branch = "regexp", -- This is the regexp branch, use this for the new version
 		config = function()
 			require("venv-selector").setup({
-				-- Callback function to update DAP Python executable when a new venv is selected
-				after_venv_change = function(venv_path)
-					require("dap-python").setup(venv_path .. "/bin/python")
-				end
+				require("venv-selector").setup({
+					settings = {
+						search = {
+							anaconda_base = {
+								command = "fd /python$ /Users/randy99/miniconda/base/envs --full-path --color never -E /proc",
+								type = "anaconda",
+							},
+						},
+					},
+				}),
 			})
 		end,
 		keys = {
@@ -33,7 +39,7 @@ return {
 			local dapui = require("dapui")
 
 			dapui.setup()
-			require("dap-python").setup("/Users/kenway213/anaconda3/bin/python") -- Default Python path
+			require("dap-python").setup("/usr/local/Caskroom/miniconda/base/envs/my-venv/bin/python") -- Default Python path
 
 			dap.listeners.before.attach.dapui_config = function()
 				dapui.open()
@@ -90,4 +96,3 @@ return {
 		end,
 	},
 }
-
