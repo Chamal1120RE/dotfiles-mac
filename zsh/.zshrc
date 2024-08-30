@@ -40,9 +40,9 @@ export FZF_DEFAULT_OPTS=" --preview 'bat -n --color=always {}' --bind=down:previ
 --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
 
 # Other path variable exports
-export PATH="$PATH:$HOME/.local/bin"
-export PATH="$JAVA_HOME/bin:$PATH"
-export JAVA_HOME="$(/usr/libexec/java_home -v 21)"
+#export PATH="$PATH:$HOME/.local/bin"
+#export PATH="$JAVA_HOME/bin:$PATH"
+#export JAVA_HOME="$(/usr/libexec/java_home -v 21)"
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 export PATH="/usr/local/opt/node@20/bin:$PATH"
 export PATH="$PATH:$HOME/Documents/nand2tetris/tools"
